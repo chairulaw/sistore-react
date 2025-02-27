@@ -134,7 +134,7 @@ const Homepages = () => {
                     <img
                       src={slide.image}
                       alt={slide.title}
-                      className="max-h-[20rem] object-contain"
+                      className="max-h-[20rem] ml-10 object-contain"
                     />
                   </div>
                 </div>
