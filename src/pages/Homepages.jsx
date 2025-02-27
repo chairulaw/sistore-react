@@ -160,13 +160,13 @@ const Homepages = () => {
           {/* Navigation Buttons */}
           <button
             onClick={() => slide("left")}
-            className="absolute left-4 top-1/2 transform hidden md:block -translate-y-1/2 bg-white/50 hover:text-white cursor-pointer text-black w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-[#2d5a7d] transition z-10"
+            className="absolute left-4 top-1/2 transform hidden md:block -translate-y-1/2 bg-white/50 hover:text-white cursor-pointer text-black w-10 h-10  items-center justify-center rounded-full shadow-lg hover:bg-[#2d5a7d] transition z-10"
           >
             <RiArrowLeftWideFill className="text-4xl" />
           </button>
           <button
             onClick={() => slide("right")}
-            className="absolute right-4 top-1/2 transform hidden md:block -translate-y-1/2 bg-white/50 hover:text-white cursor-pointer text-black w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-[#2d5a7d] transition z-10"
+            className="absolute right-4 top-1/2 transform hidden md:block -translate-y-1/2 bg-white/50 hover:text-white cursor-pointer text-black w-10 h-10  items-center justify-center rounded-full shadow-lg hover:bg-[#2d5a7d] transition z-10"
           >
             <RiArrowRightWideFill className="text-4xl" />
           </button>
