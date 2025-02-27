@@ -16,7 +16,7 @@ import {
   fashionBayi,
   olahraga,
   furniture,
-  hobby
+  hobby,
 } from "../assets/Assets";
 
 const Homepages = () => {
@@ -42,7 +42,7 @@ const Homepages = () => {
     { name: "Fashion Bayi", image: fashionBayi },
     { name: "Olahraga & Outdoor", image: olahraga },
     { name: "Perlengkapan Rumah", image: furniture },
-    { name: "Mainan & Hobby", image: hobby }
+    { name: "Mainan & Hobby", image: hobby },
   ];
 
   // Product API
@@ -103,7 +103,7 @@ const Homepages = () => {
   return (
     <div>
       {/* Slider */}
-      <section className="relative w-full max-w-screen-2xl mx-auto mt-20">
+      <section className="relative w-full max-w-screen-2xl mx-auto mt-28">
         <div className="relative overflow-hidden rounded-lg shadow-lg">
           <div
             ref={elementRef}
@@ -173,31 +173,29 @@ const Homepages = () => {
         </div>
       </section>
 
-{/* Product by Categories */}
-<section className="md:w-full max-w-screen-2xl mx-auto mt-10 px-6">
-  <div className="bg-[#1F4A6D] rounded-lg p-10 shadow-lg">
-    <h2 className="text-white text-3xl font-bold mb-6">Kategori</h2>
-    <div className="flex gap-6 overflow-x-auto md:grid md:grid-cols-5 md:grid-rows-2 md:overflow-visible scrollbar-hide">
-      {categories.map((category, index) => (
-        <div
-          key={index}
-          className="bg-white hover:bg-[#DFCDA5] rounded-lg shadow-lg flex flex-col items-center p-4 transition transform hover:scale-105 hover:origin-center cursor-pointer min-w-[120px]"
-        >
-          <img
-            src={category.image}
-            alt={category.name}
-            className="w-20 h-20 object-contain mb-3"
-          />
-          <p className="text-[#1F4A6D] font-semibold text-center whitespace-nowrap">
-            {category.name}
-          </p>
+      {/* Product by Categories */}
+      <section className="md:w-full max-w-screen-2xl mx-auto mt-10 px-6">
+        <div className="bg-[#1F4A6D] rounded-lg p-10 shadow-lg">
+          <h2 className="text-white text-3xl font-bold mb-6">Kategori</h2>
+          <div className="flex gap-6 overflow-x-auto md:grid md:grid-cols-5 md:grid-rows-2 md:overflow-visible scrollbar-hide">
+            {categories.map((category, index) => (
+              <div
+                key={index}
+                className="bg-white hover:bg-[#DFCDA5] rounded-lg shadow-lg flex flex-col items-center p-4 transition transform hover:scale-105 hover:origin-center cursor-pointer min-w-[120px]"
+              >
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="w-20 h-20 object-contain mb-3"
+                />
+                <p className="text-[#1F4A6D] font-semibold text-center whitespace-nowrap">
+                  {category.name}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
       {/* FLASH SALE */}
       <section className="bg-[#DFCDA5] rounded-xl w-full mx-auto mt-10 px-8 md:px-20 py-12 flex flex-col md:flex-row items-center relative overflow-hidden">
@@ -263,7 +261,7 @@ const Homepages = () => {
       {/* Product List from API */}
       <section className="w-full max-w-screen-2xl mx-auto mt-24 px-6">
         <h2 className="text-[#1F4A6D] flex justify-center text-3xl font-bold mb-6">
-        Rekomendasi Produk
+          Rekomendasi Produk
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-5 gap-10">
           {products.length > 0 ? (
@@ -289,8 +287,11 @@ const Homepages = () => {
             <p className="text-center w-full">Loading...</p>
           )}
         </div>
-        <div className="flex mt-5 justify-center">
-          <Link to="/allproducts" className="p-3 font-bold text-2xl bg-[#DFD0B8] rounded-2xl text-[#1F4A6D] hover:bg-[#1F4A6D] hover:text-[#DFD0B8] ease-in-out duration-300 cursor-pointer">
+        <div className="flex mt-10 mb-10 justify-center">
+          <Link
+            to="/allproducts"
+            className="p-3 font-bold text-2xl bg-[#DFD0B8] rounded-2xl text-[#1F4A6D] hover:bg-[#1F4A6D] hover:text-[#DFD0B8] ease-in-out duration-300 cursor-pointer"
+          >
             LIHAT LAINNYA
           </Link>
         </div>

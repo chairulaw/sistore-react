@@ -23,10 +23,10 @@ const Chat = () => {
   };
 
   return (
-    <div className="fixed bottom-5 right-5">
+    <div className="fixed bottom-5 right-5 z-50">
       {!isOpen && (
         <button
-          className="bg-[#153448] flex items-center space-x-2 text-xl font-semibold gap-2 cursor-pointer text-white py-4 px-6 shadow-2xl hover:bg-blue-950 transition rounded-full"
+          className="bg-[#153448] flex items-center space-x-2 text-md sm:text-lg font-semibold gap-2 cursor-pointer text-white py-3 sm:py-4 px-5 sm:px-6 shadow-2xl hover:bg-blue-950 transition rounded-full"
           onClick={() => setIsOpen(true)}
         >
           <IoChatboxEllipses className="w-6 h-6" /> Chat
@@ -34,7 +34,8 @@ const Chat = () => {
       )}
 
       {isOpen && (
-        <div className="fixed bottom-20 right-5 w-96 bg-white shadow-lg rounded-lg p-4 border border-gray-200">
+        <div className="fixed bottom-20 right-2 sm:right-5 w-80 sm:w-96 bg-white shadow-xl rounded-xl p-4 border border-gray-200">
+          {/* Header */}
           <div className="flex justify-between items-center border-b pb-2">
             <p className="font-semibold text-gray-700 text-lg">Chat</p>
             <button onClick={() => setIsOpen(false)}>
@@ -42,11 +43,14 @@ const Chat = () => {
             </button>
           </div>
 
-          <div className="h-64 overflow-y-auto p-2 text-sm text-gray-600 bg-gray-100 rounded-md mt-2">
+          {/* Chat Box */}
+          <div className="h-56 sm:h-64 overflow-y-auto p-2 text-sm text-gray-600 bg-gray-100 rounded-md mt-2">
             {messages.map((msg) => (
               <div key={msg.id} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"} mb-2`}>
                 <div
-                  className={`p-3 max-w-xs text-sm rounded-lg ${msg.sender === "user" ? "bg-green-200" : "bg-white border"}`}
+                  className={`p-3 max-w-[80%] text-sm rounded-lg ${
+                    msg.sender === "user" ? "bg-green-200" : "bg-white border"
+                  }`}
                 >
                   <p>{msg.text}</p>
                   {msg.file && <p className="text-blue-500">📎 {msg.file.name}</p>}
@@ -56,21 +60,17 @@ const Chat = () => {
             ))}
           </div>
 
+          {/* Input & Actions */}
           <div className="flex items-center mt-2 border-t pt-2">
             <input
               type="text"
               placeholder="Type a message..."
-              className="flex-1 p-2 border rounded-md text-sm"
+              className="flex-1 p-2 border rounded-md text-sm focus:outline-none focus:ring focus:border-blue-300"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
             />
-            <input
-              type="file"
-              className="hidden"
-              id="file-upload"
-              onChange={handleFileUpload}
-            />
+            <input type="file" className="hidden" id="file-upload" onChange={handleFileUpload} />
             <label htmlFor="file-upload" className="ml-2 cursor-pointer">
               <FaPaperclip className="text-gray-500 hover:text-gray-700" />
             </label>

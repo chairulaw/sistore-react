@@ -2,7 +2,7 @@ import { bni, bca, jnt, jne, mandiri, ninja, sicepat } from "../assets/Assets";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3C5B6F] text-[#DFD0B8] mt-15">
+    <footer className="bg-[#3C5B6F] text-[#DFD0B8] ">
       <div className="max-w-screen-2xl py-12 mx-auto px-6">
         {/* Header Footer */}
         <div className="flex flex-col md:flex-row justify-between text-center md:text-left mb-6">

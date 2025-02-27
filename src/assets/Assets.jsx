@@ -23,3 +23,6 @@ export {default as jne} from "./IMG/jne.png";
 export {default as ninja} from "./IMG/Ninja Express Logo.png";
 export {default as jnt} from "./IMG/J&T Express.png";
 export {default as sicepat} from "./IMG/sicepat.png";
+
+// Login dan SignUp Background
+export {default as bgLoginSignUp} from "./IMG/Group 119.png";

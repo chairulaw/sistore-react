@@ -17,7 +17,7 @@ const Populer = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-screen-2xl mx-auto mt-10 px-6">
+    <div className="w-full max-w-screen-2xl mx-auto mb-20 mt-10 px-6">
     <h2 className="text-[#1F4A6D] flex justify-center text-3xl font-bold mb-6">
     Rekomendasi Produk
     </h2>
