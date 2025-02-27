@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="max-w-screen-2xl py-12 mx-auto px-6">
         {/* Header Footer */}
         <div className="flex flex-col md:flex-row justify-between text-center md:text-left mb-6">
-          <h2 className="text-3xl font-[playfair] font-bold">SiStore</h2>
-          <h2 className="text-3xl font-[playfair] font-bold">Si Products</h2>
-          <h2 className="text-3xl font-bold">More Info</h2>
+          <h2 className="text-3xl font-[playfair] font-bold hover:text-white cursor-pointer">SiStore</h2>
+          <h2 className="text-3xl font-[playfair] font-bold hover:text-white cursor-pointer">Si Products</h2>
+          <h2 className="text-3xl font-bold hover:text-white cursor-pointer">More Info</h2>
         </div>
 
         {/* Deskripsi */}
@@ -22,24 +22,24 @@ const Footer = () => {
           {/* Layanan Pelanggan */}
           <div>
             <h3 className="font-bold mb-2">Layanan Pelanggan</h3>
-            <ul className="text-sm space-y-1">
-              <li>Bantuan</li>
-              <li>Metode Pembayaran</li>
-              <li>Lacak Pengiriman</li>
-              <li>Garansi SiStore</li>
-              <li>Hubungi Kami</li>
-              <li>Gratis Ongkir</li>
+            <ul className="text-sm cursor-pointer space-y-1">
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Bantuan</li>
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Metode Pembayaran</li>
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Lacak Pengiriman</li>
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Garansi SiStore</li>
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Hubungi Kami</li>
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Gratis Ongkir</li>
             </ul>
           </div>
 
           {/* Jelajahi SiStore */}
           <div>
             <h3 className="font-bold mb-2">Jelajahi SiStore</h3>
-            <ul className="text-sm space-y-1">
-              <li>Tentang Kami</li>
-              <li>Kebijakan SiStore</li>
-              <li>Kebijakan Privasi</li>
-              <li>Flash Sale</li>
+            <ul className="text-sm cursor-pointer space-y-1">
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Tentang Kami</li>
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Kebijakan SiStore</li>
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Kebijakan Privasi</li>
+              <li className="hover:text-white hover:bg-gray-500 rounded-lg ease-in">Flash Sale</li>
             </ul>
           </div>
 
@@ -47,9 +47,9 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-2">Pembayaran</h3>
             <div className="flex space-x-2">
-              <img src={bca} alt="BCA" className="h-6" />
-              <img src={bni} alt="BNI" className="h-6" />
-              <img src={mandiri} alt="Mandiri" className="h-6" />
+              <img src={bca} alt="BCA" className="h-6 cursor-pointer" />
+              <img src={bni} alt="BNI" className="h-6 cursor-pointer" />
+              <img src={mandiri} alt="Mandiri" className="h-6 cursor-pointer" />
             </div>
           </div>
 
@@ -57,10 +57,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-2">Pengiriman</h3>
             <div className="flex space-x-2">
-              <img src={jne} alt="JNE" className="h-6" />
-              <img src={jnt} alt="J&T" className="h-6" />
-              <img src={ninja} alt="Ninja" className="h-6" />
-              <img src={sicepat} alt="SiCepat" className="h-6" />
+              <img src={jne} alt="JNE" className="h-6 cursor-pointer" />
+              <img src={jnt} alt="J&T" className="h-6 cursor-pointer" />
+              <img src={ninja} alt="Ninja" className="h-6 cursor-pointer" />
+              <img src={sicepat} alt="SiCepat" className="h-6 cursor-pointer" />
             </div>
           </div>
         </div>
@@ -74,8 +74,8 @@ const Footer = () => {
       </div>
       
       {/* Copyright Pindah Ke Fixed */}
-    <div className="bg-[#153448] px-5 text-sm py-4  bottom-0 w-full">
-      <p className="text-2xl text-white font-semibold">Copyright 2024 SI 2022 | SI ITEBA</p>
+    <div className="bg-[#153448] px-5 text-sm py-5 md:py-4  bottom-0 w-full">
+      <p className="md:text-2xl text-white font-semibold">Copyright 2024 SI 2022 | SI ITEBA</p>
     </div>
     </footer>
   );

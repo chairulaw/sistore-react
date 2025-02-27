@@ -2,6 +2,7 @@ import { RiArrowRightWideFill, RiArrowLeftWideFill } from "react-icons/ri";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import GlobalApi from "../API/GlobalApi";
+import { Link } from "react-router-dom";
 import {
   sliderPhoto1,
   sliderPhoto2,
@@ -102,7 +103,6 @@ const Homepages = () => {
   return (
     <div>
       {/* Slider */}
-      {/* Slider */}
       <section className="relative w-full max-w-screen-2xl mx-auto mt-20">
         <div className="relative overflow-hidden rounded-lg shadow-lg">
           <div
@@ -149,7 +149,7 @@ const Homepages = () => {
                 key={index}
                 onClick={() => smoothScroll(index)}
                 className={`w-10 h-1 rounded-full cursor-pointer hover:bg-[#1a3a53] transition ${
-                  activeIndex === index ? "bg-[#1a3a53]" : "bg-gray-300"
+                  activeIndex === index ? "bg-[#1a3a53]" : "bg-gray-400"
                 }`}
               >
                 <span className="sr-only">Slide {index + 1}</span>
@@ -160,13 +160,13 @@ const Homepages = () => {
           {/* Navigation Buttons */}
           <button
             onClick={() => slide("left")}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:text-white cursor-pointer text-black w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-[#2d5a7d] transition z-10"
+            className="absolute left-4 top-1/2 transform hidden md:block -translate-y-1/2 bg-white/50 hover:text-white cursor-pointer text-black w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-[#2d5a7d] transition z-10"
           >
             <RiArrowLeftWideFill className="text-4xl" />
           </button>
           <button
             onClick={() => slide("right")}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:text-white cursor-pointer text-black w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-[#2d5a7d] transition z-10"
+            className="absolute right-4 top-1/2 transform hidden md:block -translate-y-1/2 bg-white/50 hover:text-white cursor-pointer text-black w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-[#2d5a7d] transition z-10"
           >
             <RiArrowRightWideFill className="text-4xl" />
           </button>
@@ -181,7 +181,7 @@ const Homepages = () => {
       {categories.map((category, index) => (
         <div
           key={index}
-          className="bg-white rounded-lg shadow-lg flex flex-col items-center p-4 transition transform hover:scale-105 hover:origin-center cursor-pointer min-w-[120px]"
+          className="bg-white hover:bg-[#DFCDA5] rounded-lg shadow-lg flex flex-col items-center p-4 transition transform hover:scale-105 hover:origin-center cursor-pointer min-w-[120px]"
         >
           <img
             src={category.image}
@@ -265,17 +265,17 @@ const Homepages = () => {
         <h2 className="text-[#1F4A6D] flex justify-center text-3xl font-bold mb-6">
         Rekomendasi Produk
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-5 gap-10">
           {products.length > 0 ? (
             products.map((product, index) => (
               <div
                 key={index}
-                className="bg-[#FEFAF6] rounded-lg shadow-lg flex flex-col p-4 transition hover:bg-[#DFCDA5] hover:scale-105 ease-in-out duration-300 cursor-pointer"
+                className="bg-[#FEFAF6] rounded-lg shadow-lg flex flex-col items-center p-4 transition hover:bg-[#DFCDA5] hover:scale-105 ease-in-out duration-300 cursor-pointer"
               >
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-40 h-40 items-center object-contain mb-3"
+                  className="w-40 h-40 object-contain mb-3"
                 />
                 <p className="text-[#1F4A6D] mt-8 font-semibold">
                   {product.title}
@@ -290,9 +290,9 @@ const Homepages = () => {
           )}
         </div>
         <div className="flex mt-5 justify-center">
-          <button className="p-3 font-bold text-2xl bg-[#DFD0B8] rounded-2xl text-[#1F4A6D] hover:bg-[#1F4A6D] hover:text-[#DFD0B8] ease-in-out duration-300 cursor-pointer">
+          <Link to="/allproducts" className="p-3 font-bold text-2xl bg-[#DFD0B8] rounded-2xl text-[#1F4A6D] hover:bg-[#1F4A6D] hover:text-[#DFD0B8] ease-in-out duration-300 cursor-pointer">
             LIHAT LAINNYA
-          </button>
+          </Link>
         </div>
       </section>
     </div>

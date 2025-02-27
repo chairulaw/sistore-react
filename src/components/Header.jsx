@@ -45,7 +45,7 @@ const Header = () => {
         <span className="text-gray-700 font-bold text-2xl">|</span>
         {/* Buttons */}
         <div className="flex items-center gap-3">
-          <button className="cursor-pointer font-bold bg-[#153448] text-[#DFD0B8] px-4 py-2 rounded-2xl hover:bg-[#DFD0B8] hover:text-[#153448] ease-in-out duration-300">
+          <button className="cursor-pointer font-bold border bg-[#153448] text-[#DFD0B8] px-4 py-2 rounded-2xl hover:bg-[#DFD0B8] hover:text-[#153448] ease-in-out duration-300">
             Login
           </button>
           <button className="cursor-pointer font-bold border border-[#153448] text-[#153448] px-4 py-2 rounded-2xl hover:bg-[#DFD0B8] hover:text-[#153448] ease-in-out duration-300">
