@@ -12,7 +12,7 @@ const Header = () => {
   const iconItems = [
     { icon: IoBag, to: "/cart" },
     { icon: IoSearchOutline, to: "/" },
-    { icon: FaUser, to: "/" },
+    { icon: FaUser, to: "/signup" },
   ];
 
   return (
@@ -58,7 +58,7 @@ const Header = () => {
       <div className="md:hidden flex gap-6 items-center">
         {iconItems.map((item, index) => (
           <Link key={index} to={item.to} className="text-[#153448] hover:text-gray-500 ease-in-out duration-300">
-            <item.icon size={24} />
+            <item.icon size={24}/>
           </Link>
         ))}
       </div>

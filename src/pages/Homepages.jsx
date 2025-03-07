@@ -121,9 +121,9 @@ const Homepages = () => {
                 key={index}
                 className="flex-shrink-0 w-full snap-center px-0"
               >
-                <div className="bg-[#e8d9c0] rounded-lg flex items-center justify-between p-10 h-[350px] relative">
+                <div className="bg-[#e8d9c0] rounded-lg flex items-center justify-between relative">
                   <div className="w-1/2">
-                    <h2 className="text-4xl font-bold text-[#1a3a53] font-playfair text-center mb-4">
+                    <h2 className="text-5xl font-bold text-[#1a3a53] font-playfair text-center mb-4">
                       {slide.title}
                     </h2>
                     <p className="text-[#1a3a53] text-lg text-center">
@@ -268,17 +268,17 @@ const Homepages = () => {
             products.map((product, index) => (
               <div
                 key={index}
-                className="bg-[#FEFAF6] rounded-lg shadow-lg flex flex-col items-center p-4 transition hover:bg-[#DFCDA5] hover:scale-105 ease-in-out duration-300 cursor-pointer"
+                className="bg-[#FEFAF6] rounded-lg shadow-lg flex flex-col p-4 transition hover:bg-[#DFCDA5] hover:scale-105 ease-in-out duration-300 cursor-pointer"
               >
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-40 h-40 object-contain mb-3"
+                  className="w-40 h-40 object-contain mb-3 mx-auto"
                 />
-                <p className="text-[#1F4A6D] mt-8 font-semibold">
+                <p className="text-[#1F4A6D] mt-8 font-semibold line-clamp-2 flex-grow">
                   {product.title}
                 </p>
-                <p className="text-[#1F4A6D] mt-2 justify-center font-black">
+                <p className="text-[#1F4A6D] mt-2 text-left text-2xl font-bold">
                   ${product.price}
                 </p>
               </div>

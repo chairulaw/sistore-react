@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="max-w-screen-2xl py-12 mx-auto px-6">
         {/* Header Footer */}
         <div className="flex flex-col md:flex-row justify-between text-center md:text-left mb-6">
-          <h2 className="text-3xl font-[playfair] font-bold hover:text-white cursor-pointer">SiStore</h2>
-          <h2 className="text-3xl font-[playfair] font-bold hover:text-white cursor-pointer">Si Products</h2>
+          <h2 className="text-3xl font-playfair font-bold hover:text-white cursor-pointer">SiStore</h2>
+          <h2 className="text-3xl font-playfair font-bold hover:text-white cursor-pointer">Si Products</h2>
           <h2 className="text-3xl font-bold hover:text-white cursor-pointer">More Info</h2>
         </div>
 

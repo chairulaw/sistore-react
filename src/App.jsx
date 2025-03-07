@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 // Import Components
 import Header from "./components/Header";
@@ -17,11 +18,14 @@ import SignUp from "./pages/SignUp";
 import Cart from "./pages/Cart";
 
 function AppContent() {
-  const location = useLocation();
+  const { pathname } = useLocation();
   
   // ✅ Fix logic: excludeComponents harus boolean
-  const excludeComponents = ["/login", "/signup"].includes(location.pathname);
-  const showNavCategory = ["/allproducts", "/populer", "/terbaru", "/terlaris"].includes(location.pathname);
+  const excludeComponents = ["/login", "/signup"].includes(pathname);
+  const showNavCategory = ["/allproducts", "/populer", "/terbaru", "/terlaris"].includes(pathname);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="flex flex-col min-h-screen bg-white font-raleway scrollbar-none scroll-smooth">
